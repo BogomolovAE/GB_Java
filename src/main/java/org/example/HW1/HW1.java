@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class HW1 {
     public static void main(String[] args) {
         Scanner console=new Scanner(System.in);
-        System.out.println("Input your string: ");
+        System.out.print("Input your string: ");
         String s=console.nextLine();
         String [] formatedS=s.strip().replaceAll("\\s+", " ").split(" ");
         for (int i=formatedS.length-1;i>=0;i--){
