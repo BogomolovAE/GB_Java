@@ -1,5 +1,5 @@
 package org.example.HW6;
-//2) Дана последовательность из N целых чисел. Верно ли, что последовательность является возрастающей.
+
 import java.util.Scanner;
 public class HW6 {
     public static void main(String[] args) {
