@@ -1,10 +1,21 @@
 package org.example.HW5;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
 public class HW5 {
     public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Enter N (array length): ");
+        int N = console.nextInt();
+        List arr = new ArrayList();
+        for (int i=0;i<N;i++){
+            System.out.print("Enter element № "+(i+1)+": ");
+            arr.add(console.nextInt());
+        }
         int sum=0;
-        int[] arr=new int[] {1,6,4,3,7,10,11,5,8};
-        for (int i=0;i<arr.length;i++){
-            if (IsSimple(arr[i])) sum+=arr[i];
+        for (int i=0;i<arr.size();i++){
+            if (IsSimple((Integer) arr.get(i))) sum+=(Integer)arr.get(i);
         }
         System.out.println("Result = "+sum);
     }
