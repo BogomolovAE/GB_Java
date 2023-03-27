@@ -8,7 +8,7 @@ import java.util.List;
 public class EX1 {
     public static void main(String[] args) {
         Goods good1=new Goods("good1 высший","first",13.56);
-        Goods good2=new Goods("good2 высший","second",12.56);
+        Goods good2=new Goods("good2 высший","second",14.56);
         Goods good3=new Goods("good3","third",56.56);
         Goods good4=new Goods("good4","first",20.56);
         Goods good5=new Goods("good5 высший","second",8.56);
@@ -27,9 +27,9 @@ public class EX1 {
         System.out.println( "max price = "+MaxPrice(goodsList));
     }
     public static  Double MaxPrice (List<Goods> goodsList){
-        Double maxPrice= -1.0;
+        Double maxPrice= goodsList.get(0).getPrice();
         for (int i=0;i<goodsList.size();i++){
-            if (goodsList.get(i).getPrice()>maxPrice&&
+            if (Double.compare(goodsList.get(i).getPrice(),maxPrice)>0&&
                (goodsList.get(i).getCategory()=="first"||
                 goodsList.get(i).getCategory()=="second")&&
                 goodsList.get(i).getName().contains("высший")){
