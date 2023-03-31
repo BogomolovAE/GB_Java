@@ -6,25 +6,25 @@ import java.util.Map;
 public class Cw1 {
     public static void main(String[] args) {
         String textToAnalyze="Россия идет вперед всей планеты. Планета — это не Россия.";
-        String [] parsedText=  textConvertation(textToAnalyze).split(" ");
+        String [] parsedText=  TextConvertation(textToAnalyze).split(" ");
         System.out.println(FillDict(parsedText));
     }
 
 
-    public static String textConvertation (String textToAnalyze){
+    public static String TextConvertation (String textToAnalyze){
     String s="";
         for (int i=0;i<textToAnalyze.length();i++){
         if (Character.isLetter(textToAnalyze.charAt(i))||
             Character.isDigit(textToAnalyze.charAt(i))||
             textToAnalyze.charAt(i) ==' ')
         {
-            s+=Character.toString(textToAnalyze.charAt(i)).toLowerCase();
+            s+=Character.toString(textToAnalyze.charAt(i));
         }
         else {
             s+=Character.toString(' ');
         }
     }
-        s= s.replaceAll("\\s+", " ");
+        s= s.replaceAll("\\s+", " ").toLowerCase();
         return s;
     }
 
